@@ -1,0 +1,86 @@
+:root {
+  --GrayishBlue: hsl(217, 19%, 38%);
+  --DarkGrayishBlue: hsl(217, 19%, 24%);
+  --DarkBlue: hsl(218, 23%, 16%);
+  --LightCyan: hsl(193, 38%, 86%);
+  --NeonGreen: hsl(150, 100%, 66%);
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--DarkBlue);
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+main{
+  background-color: var(--DarkGrayishBlue);
+  padding: 35px 35px 65px;
+  color: var(--LightCyan);
+  border-radius: 15px;
+  text-align: center;
+  position: relative;
+  max-width: calc(444px + 70px);
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.123);
+  margin: 0 10px 75px;
+}
+
+.title{
+  font-size: 13px;
+  color: var(--NeonGreen);
+  letter-spacing: 4px;
+}
+
+.advice{
+  font-size: 26px;
+  font-weight: bold;
+  width:fit-content;
+  margin: 20px auto 30px;
+  display: grid;
+  place-items: center;
+}
+
+main > button{
+  outline: none;
+  border: none;
+  position: absolute;
+  translate: -50% 50%;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--NeonGreen);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  width: 60px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+main>button:hover{
+  box-shadow: 0px 0px 10px 1px var(--NeonGreen);
+}
+
+main>button:disabled{
+  background-color: var(--LightCyan);
+  box-shadow: 0px 0px 10px 1px var(--LightCyan);
+}
+
+@media (max-width: 525px) {
+  main{
+    padding: 25px 10px 50px;
+  }
+    main>button{
+      width: 50px;
+    }
+        .advice{
+          font-size: 20px;
+        }
+}
